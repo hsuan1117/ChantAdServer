@@ -29,6 +29,14 @@
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
+            <div class="mt-4">
+                <x-jet-label for="register_as" value="{{ __('Register As') }}" />
+                <select id="register_as" class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full" style="width: 100%">
+                    <option value="publisher">{{ __('Publisher') }}</option>
+                    <option value="advertiser">{{ __('Advertiser') }}</option>
+                </select>
+            </div>
+
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-jet-label for="terms">
